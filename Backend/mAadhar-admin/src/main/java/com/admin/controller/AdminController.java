@@ -64,6 +64,10 @@ public class AdminController {
 		service.addCard(card);
 		return true;
 	}
+	@PostMapping("/updateCard/{id}")
+	public void updateState(@RequestBody CardDetails newData) {
+		service.updateCardDetails(newData);
+	}
 	
 	
 }
