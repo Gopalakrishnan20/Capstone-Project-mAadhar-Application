@@ -1,23 +1,20 @@
-package com.app.entities;
+package com.admin.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GeneratorType;
-
 
 @Entity
-@Table(name="credentials")
 public class Credentials {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long aId;
+	@Column
 	private String uName;
+	@Column
 	private String pass;
 	
 	public String getuName() {

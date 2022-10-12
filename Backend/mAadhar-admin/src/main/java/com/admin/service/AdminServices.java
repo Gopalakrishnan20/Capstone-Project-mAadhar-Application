@@ -1,4 +1,4 @@
-package com.app.service;
+package com.admin.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.app.entities.Credentials;
-import com.app.repository.AdminRepository;
+import com.admin.model.Credentials;
+import com.admin.repository.AdminRepository;
 
 @Service
 public class AdminServices {
@@ -27,7 +27,7 @@ public class AdminServices {
 		return Repo.findById(id);
 	}
 	public Credentials readByUname(String uname) {
-		return Repo.findByUname(uname);
+		return Repo.findByuName(uname);
 	}
 
 }

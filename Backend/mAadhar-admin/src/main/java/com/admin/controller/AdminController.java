@@ -1,13 +1,14 @@
-package com.app.controller;
+package com.admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.entities.Credentials;
-import com.app.service.AdminServices;
+import com.admin.model.Credentials;
+import com.admin.service.AdminServices;
 
 @RestController 
 @RequestMapping("/admin")
@@ -27,5 +28,10 @@ public class AdminController {
 			return false;
 		}
 		
+	}
+	
+	@GetMapping("/test")
+	public String test() {
+		return "Test";
 	}
 }

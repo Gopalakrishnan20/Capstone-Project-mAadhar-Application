@@ -1,13 +1,14 @@
-package com.app.repository;
+package com.admin.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.app.entities.Credentials;
+import com.admin.model.Credentials;
 
 @Repository
 public interface AdminRepository extends CrudRepository<Credentials, Long> {
 
-	Credentials findByUname(String uname);
+
+	Credentials findByuName(String uName);
 
 }
