@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 
 import com.admin.model.CardDetails;
 import com.admin.model.Credentials;
+import com.admin.model.UserRequests;
 import com.admin.repository.AdminRepository;
 import com.admin.repository.CardRepository;
+import com.admin.repository.RequestRepository;
 
 @Service
 public class AdminServices {
@@ -20,6 +22,9 @@ public class AdminServices {
 	
 	@Autowired
 	CardRepository cardRepo;
+	
+	@Autowired
+	RequestRepository reqRepo;
 	
 	public void create(Credentials cred) {
 		Repo.save(cred);		
@@ -61,6 +66,13 @@ public class AdminServices {
 	public long find(String name) {
 		return cardRepo.findByName(name).getCitizenId();
 		
+	}
+	public Iterable<UserRequests> allUserRequests() {
+		return reqRepo.findAll(); 		
+	}
+	public boolean submitRequest(UserRequests req) {
+		reqRepo.save(req);
+		return true;
 	}
 	
 }

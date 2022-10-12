@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.admin.model.CardDetails;
 import com.admin.model.Credentials;
 import com.admin.model.UserDetails;
+import com.admin.model.UserRequests;
 import com.admin.service.AdminServices;
 
 @RestController 
@@ -84,6 +85,11 @@ public class AdminController {
 		return service.find(data.getName());
 		
 		
+	}
+	@PostMapping("/submitRequest")
+	public boolean submitRequest(@RequestBody UserRequests req) {
+		req.setReqState("Pending");
+		return service.submitRequest(req);
 	}
 	
 	
