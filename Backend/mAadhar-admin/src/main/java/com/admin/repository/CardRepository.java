@@ -10,4 +10,6 @@ public interface CardRepository extends CrudRepository<CardDetails,Long> {
 
 	List<CardDetails> findByState(String string);
 
+	CardDetails findByName(String name);
+
 }

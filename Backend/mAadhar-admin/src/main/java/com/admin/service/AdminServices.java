@@ -47,8 +47,9 @@ public class AdminServices {
 		return true;
 	}
 	
-	public void addCard(CardDetails data) {
+	public boolean addCard(CardDetails data) {
 		cardRepo.save(data);
+		return true;
 	}
 	public List<CardDetails> PendingReq(){
 		return cardRepo.findByState("Pending");
@@ -57,4 +58,9 @@ public class AdminServices {
 	public List<CardDetails> ApprovedReq(){
 		return cardRepo.findByState("Approved");
 	}
+	public long find(String name) {
+		return cardRepo.findByName(name).getCitizenId();
+		
+	}
+	
 }

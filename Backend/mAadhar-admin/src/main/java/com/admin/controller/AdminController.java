@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.admin.model.CardDetails;
 import com.admin.model.Credentials;
+import com.admin.model.UserDetails;
 import com.admin.service.AdminServices;
 
 @RestController 
@@ -67,6 +68,22 @@ public class AdminController {
 	@PostMapping("/updateCard/{id}")
 	public void updateState(@RequestBody CardDetails newData) {
 		service.updateCardDetails(newData);
+	}
+	
+	@PostMapping("/applyCard")
+	public Long applyCard(@RequestBody UserDetails data) {
+		CardDetails application = new CardDetails();
+		application.setName(data.getName());
+		application.setAddress(data.getAddress());
+		application.setDob(data.getDob());
+		application.setEmail(data.getEmail());
+		application.setGender(data.getGender());
+		application.setMobile(data.getMobileNo());
+		application.setState("Pending");
+		service.addCard(application);
+		return service.find(data.getName());
+		
+		
 	}
 	
 	
