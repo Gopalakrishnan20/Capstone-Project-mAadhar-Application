@@ -3,6 +3,7 @@ package com.admin.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.engine.internal.Nullability;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,11 +24,8 @@ public class AdminServices {
 		return (List<Credentials>) Repo.findAll();
 	}
 	
-	public Optional<Credentials> read(long id) {
-		return Repo.findById(id);
+	public Credentials read(String uName) {
+		return Repo.findByuName(uName);
 	}
-	public Credentials readByUname(String uname) {
-		return Repo.findByuName(uname);
-	}
-
+	
 }
