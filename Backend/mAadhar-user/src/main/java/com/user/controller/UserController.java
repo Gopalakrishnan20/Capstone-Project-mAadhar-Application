@@ -30,9 +30,6 @@ public class UserController {
 		return services.register(uCred);
 	}
 	
-	@GetMapping("/all")
-	public Iterable<UserCredentials> allData(){
-		return services.getAll();	}
 	@PostMapping("/applyCard")
 	public long applyCard(@RequestBody UserCredentials userCred) {
 		return services.applyAadhar(userCred);
