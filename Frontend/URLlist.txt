@@ -1,0 +1,17 @@
+UserAPI URLs:
+http://localhost:6789/AadharApp/login
+http://localhost:6789/AadharApp/register
+http://localhost:6789/AadharApp/applyCard
+http://localhost:6789/AadharApp/sendRequest
+
+AdminAPI URLs:
+http://localhost:8080/admin/signin
+http://localhost:8080/admin/allData
+http://localhost:8080/admin/pending
+http://localhost:8080/admin/approved
+http://localhost:8080/admin/delete/{id}
+http://localhost:8080/admin/add
+http://localhost:8080/admin/updateCard/{id}
+http://localhost:8080/admin/applyCard
+http://localhost:8080/admin/submitRequest
+http://localhost:8080/admin/pendingReq
