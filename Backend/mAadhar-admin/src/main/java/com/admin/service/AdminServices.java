@@ -74,5 +74,8 @@ public class AdminServices {
 		reqRepo.save(req);
 		return true;
 	}
+	public List<UserRequests> viewPending(){
+		return reqRepo.findByReqState("Pending");
+	}
 	
 }

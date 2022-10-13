@@ -3,6 +3,8 @@ package com.user.services;
 
 import java.net.URL;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -57,5 +59,19 @@ public class UserServices {
 		
 	}
 	
+	public boolean sendRequest(UserCredentials userCred,String reqName) {
+		String url="http://localhost:8080/admin/submitRequest";
+		 HttpHeaders headers = new HttpHeaders();
+	      headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	      HttpEntity<UserCredentials> entity = new HttpEntity<UserCredentials>(userCred,headers);
+	      Map<String, String> map = new HashMap<>();
+	      map.put("reqName", reqName);
+		return restTemplate.exchange(url, HttpMethod.POST, entity, Boolean.class, map).getBody();
+		
+		
+//	      return restTemplate.exchange(
+//	         url, HttpMethod.POST, entity, Boolean.class).getBody();
+		
+	}
 
 }

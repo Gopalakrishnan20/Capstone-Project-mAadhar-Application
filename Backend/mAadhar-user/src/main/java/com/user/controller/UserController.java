@@ -35,5 +35,9 @@ public class UserController {
 		return services.applyAadhar(userCred);
 		
 	}
+	@PostMapping("/sendRequest")
+	public boolean sendRequest(@RequestBody UserCredentials userCred,@RequestParam String reqName) {
+		return services.sendRequest(userCred, reqName);
+	}
 
 }

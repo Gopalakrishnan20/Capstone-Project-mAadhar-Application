@@ -87,9 +87,23 @@ public class AdminController {
 		
 	}
 	@PostMapping("/submitRequest")
-	public boolean submitRequest(@RequestBody UserRequests req) {
+	public boolean submitRequest(@RequestBody UserDetails ud,String reqName) {
+		UserRequests req=new UserRequests();
+		req.setName(ud.getName());
+		req.setEmail(ud.getEmail());
+		req.setAddress(ud.getAddress());
+		req.setDob(ud.getDob());
+		req.setGender(ud.getGender());
+		req.setMobileNo(ud.getMobileNo());
+		req.setReqName(reqName);	
 		req.setReqState("Pending");
+		req.setPass(ud.getPass());
 		return service.submitRequest(req);
+	}
+	
+	@GetMapping("/pendingReq")
+	public List<UserRequests> viewPending(){
+		return service.viewPending();
 	}
 	
 	
