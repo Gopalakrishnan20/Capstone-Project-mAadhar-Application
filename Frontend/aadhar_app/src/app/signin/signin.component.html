@@ -1,0 +1,43 @@
+<div class="container">
+  <!-- Form -->
+<div class="row">
+<div class="col-6">
+  <form class="form-example card mt-5 pl-5 pt-5 pb-5" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+
+    <div class="form-group">
+      <label for="phone_num" class="text-light">MobileNumber:</label>
+      <input
+        type="text"
+        class="form-control phone_num"
+        id="phone_num"
+        placeholder="Mobile Number"
+        name="phone_num"
+        style="width: 20vw"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="text-light">Password:</label>
+      <input
+        type="password"
+        class="form-control password"
+        id="password"
+        placeholder="Password"
+        name="password"
+        style="width: 20vw"
+      />
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary btn-customized">
+        Login
+      </button>
+    </div>
+    <!-- End input fields -->
+  </form>
+</div>
+  <div class="col-6">
+    <img src="https://www.thenewsminute.com/sites/default/files/styles/w702xh400/public/Aadhaar_Women_Rep_PTI_COVID_Vaccine_1200_Nadia_160821.jpg?itok=MPqu2xbk" alt="">
+  </div>
+  <!-- Form end -->
+</div>
+</div>

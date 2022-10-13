@@ -1,0 +1,45 @@
+<div class="container">
+  <!-- Form -->
+<div class="row">
+<div class="col-6">
+  <form class="form-example card mt-5 pl-5 pt-5 pb-5" (ngSubmit)="onSubmit()">
+    <h1>Admin Login</h1>
+
+    <div class="form-group">
+      <label for="phone_num" class="text-light">Username:</label>
+      <input
+        type="text"
+        [(ngModel)]="admin.uName"
+        class="form-control uName"
+        id="admin"
+        placeholder="admin"
+        name="admin"
+        style="width: 20vw"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="text-light">Password:</label>
+      <input
+        type="password"
+        [(ngModel)]="admin.pass"
+        class="form-control password"
+        id="password"
+        placeholder="Password"
+        name="password"
+        style="width: 20vw"
+      />
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary btn-customized">
+        Login
+      </button>
+    </div>
+    <!-- End input fields -->
+  </form>
+</div>
+  <div class="col-6">
+    <img width="500rem" src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?w=740&t=st=1665652644~exp=1665653244~hmac=c6269792f6b083040ab891f5db687a9b5c42c11f8f8b512b520e157fea8c1b4c" alt="">
+  </div>
+  <!-- Form end -->
+</div>
+</div>
