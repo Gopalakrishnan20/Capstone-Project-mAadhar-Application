@@ -1,17 +1,17 @@
-<h2>User Dashboard</h2>
+<div class="container">
+<h2>Your Card</h2>
 <div>
-  <button class="btn btn-primary ml-5 mt-5">Apply for new aadhar</button>
+  <div class="card" style="width: 638px;" >
+    <div class="card-header">
+      <i class="fa-solid fa-id-card"></i>
+        Preview
+    </div>
+    <div class="card-body"><img src="https://newsd.in/wp-content/uploads/2019/01/aadhar-card-sample-picture.jpg" alt="" width="100%" height="100%"></div>
 </div>
-<br />
-<div>
   <button class="btn btn-primary ml-5" (click)="gotoUpdateAadhar()">
     Update aadhar details
   </button>
 </div>
-<br />
-
-<div>
-  <button class="btn btn-primary ml-5">Request duplicate aadhar</button>
 </div>
  
 <div id="layoutSidenav">
@@ -24,56 +24,27 @@
                       <div class="card bg-primary text-white mb-4">
                           <div class="card-body">New Card Requests</div>
                           <div class="card-footer d-flex align-items-center">
-                              <a class="small text-white stretched-link" href="#">View Details</a><span class="badge badge-light ms-2">0</span>
+                              <a class="small text-white stretched-link" href="#">Apply</a>
                               <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                           </div>
                       </div>
                   </div>
                   <div class="col-xl-3 col-md-6">
                       <div class="card bg-warning text-white mb-4">
-                          <div class="card-body">Correction Requests</div>
+                          <div class="card-body">Correction Request</div>
                           <div class="card-footer d-flex align-items-center">
-                              <a class="small text-white stretched-link" href="#">View Details</a><span class="badge badge-danger ms-2">1</span>
+                              <a class="small text-white stretched-link" href="#">Send</a>
                               <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-xl-3 col-md-6">
-                      <div class="card bg-success text-white mb-4">
-                          <div class="card-body">Approved Requests</div>
-                          <div class="card-footer d-flex align-items-center">
-                              <a class="small text-white stretched-link" href="#">View Details</a><span class="badge badge-danger ms-2">3</span>
-                              <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                           </div>
                       </div>
                   </div>
                   <div class="col-xl-3 col-md-6">
                       <div class="card bg-danger text-white mb-4">
-                          <div class="card-body">Delete Requests</div>
+                          <div class="card-body">Delete Request</div>
                           <div class="card-footer d-flex align-items-center">
-                              <a class="small text-white stretched-link" href="#">View Details</a><span class="badge badge-light ms-2">0</span>
+                              <a class="small text-white stretched-link" href="#">Send</a>
                               <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                           </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-xl-6">
-                      <div class="card mb-4">
-                          <div class="card-header">
-                              <i class="fas fa-chart-area me-1"></i>
-                              Area Chart Example
-                          </div>
-                          <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                      </div>
-                  </div>
-                  <div class="col-xl-6">
-                      <div class="card mb-4">
-                          <div class="card-header">
-                              <i class="fas fa-chart-bar me-1"></i>
-                              Bar Chart Example
-                          </div>
-                          <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                       </div>
                   </div>
               </div>
